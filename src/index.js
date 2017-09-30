@@ -1,10 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, hashHistory } from 'react-router';
-import createRoutes from './routers.js';
+import { Route, BrowserRouter } from 'react-router-dom';
+// import createRoutes from './routers.js';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<Router history={hashHistory} routes={createRoutes} />, document.getElementById('root'));
+ReactDOM.render(
+	<BrowserRouter>
+		<div>
+			<Route exact path="/" component={App} />
+		</div>
+	</BrowserRouter>
+	, document.getElementById('root')
+);
 registerServiceWorker();

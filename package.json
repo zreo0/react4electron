@@ -16,5 +16,8 @@
   },
   "main": "./main.js",
   "homepage": ".",
-  "DEV": true
+  "DEV": true,
+  "devDependencies": {
+    "react-router-dom": "^4.2.2"
+  }
 }
